@@ -1,0 +1,83 @@
+server:
+  port: 81
+#  servlet:
+#    context-path: /test
+logging:
+  level:
+    root: info
+
+# noinspection SpringBootApplicationYaml
+country: china
+# noinspection SpringBootApplicationYaml
+
+province: beijing
+# noinspection SpringBootApplicationYaml
+
+city: beijing
+# noinspection SpringBootApplicationYaml
+
+area: haidian
+
+# noinspection SpringBootApplicationYaml
+prot: 8080
+# noinspection SpringBootApplicationYaml
+
+birthday: 1949-10-01
+
+user:
+  # noinspection SpringBootApplicationYaml
+  name: itcast
+  # noinspection SpringBootApplicationYaml
+  age: 16
+
+a:
+  b:
+    c:
+      d:
+        e: 123
+
+likes:
+  - game
+  - music
+  - sleep
+
+
+likes2: [game,music,sleep]
+
+
+users3: [{name:zhang,age:19},{name:lisi,age:17}]
+
+# 使用~表示null
+
+users:
+  - name: zhangsan
+    age: 16
+  - name: lisi
+    age: 18
+
+users2:
+  -
+    name: zhaoliu
+    age: wangwu
+  -
+    name: lihua
+    birth: 19
+
+
+# 使用${属性名} 引用数据
+baseDir: \usr\word
+
+tempDir: ${baseDir}\temp
+
+# 加个"" 转移字符可以生效
+# temp: "${baseDir}\temp"   ->  \usr\word     emp
+
+# 封装一部分数据
+# 创建一个类用于封装这个数据
+# 由spring加载到对象中，告诉spring加载这部分信息
+# 使用的时候从spring中直接获取信息使用
+datasource:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost/db1
+  username: root
+  password: 123456
