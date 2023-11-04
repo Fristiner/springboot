@@ -23,6 +23,6 @@ logging:
       # 文件名称
       file-name-pattern: server.%d{yyyy-MM-dd}.%i.log
       # 文件大小
-      max-file-size: 4KB
+      max-file-size: 20MB
 
 #    console: "%d %5p %n"
