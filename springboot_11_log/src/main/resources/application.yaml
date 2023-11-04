@@ -1,0 +1,28 @@
+logging:
+  level:
+    root: info
+    # 设置分组将某个组设置级别
+    # 这里设置分组
+#    group:
+#      ebank:
+    # 设置某个包的日志级别  整体上是info  这个包是debug级别
+    # com.ma.controller: debug
+    # 设置某个组的日志级别
+    com.ma.controller: warn
+  # 设置日志的模板格式
+#  pattern:
+#    console: "%d - %m %n"
+  pattern:
+    console: "%d %clr(%5p) --- [%16t] %clr(%-40.40c){cyan} : %m %n"
+
+
+  file:
+    name: server.log
+  logback:
+    rollingpolicy:
+      # 文件名称
+      file-name-pattern: server.%d{yyyy-MM-dd}.%i.log
+      # 文件大小
+      max-file-size: 4KB
+
+#    console: "%d %5p %n"
