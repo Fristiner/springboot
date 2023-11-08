@@ -1,0 +1,11 @@
+2023-11-07T18:59:45.447+08:00  INFO 25456 --- [main] com.ma.Springboot11LogApplication        : Starting Springboot11LogApplication using Java 21 with PID 25456 (D:\book\JavaProject\springboot\springboot_11_log\target\classes started by ma in D:\book\JavaProject\springboot)
+2023-11-07T18:59:45.450+08:00  INFO 25456 --- [main] com.ma.Springboot11LogApplication        : No active profile set, falling back to 1 default profile: "default"
+2023-11-07T18:59:46.745+08:00  INFO 25456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-07T18:59:46.747+08:00  INFO 25456 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded Apache Tomcat Native library [2.0.5] using APR version [1.7.4].
+2023-11-07T18:59:46.754+08:00  INFO 25456 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 3.0.10 1 Aug 2023]
+2023-11-07T18:59:46.770+08:00  INFO 25456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-07T18:59:46.770+08:00  INFO 25456 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-07T18:59:46.893+08:00  INFO 25456 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-07T18:59:46.894+08:00  INFO 25456 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1388 ms
+2023-11-07T18:59:47.705+08:00  INFO 25456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-07T18:59:47.724+08:00  INFO 25456 --- [main] com.ma.Springboot11LogApplication        : Started Springboot11LogApplication in 2.986 seconds (process running for 3.831)

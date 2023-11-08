@@ -24,8 +24,8 @@ public class BookController {
     private IBookService bookService;
 
     @GetMapping
-    public R getAll(){
-        return new R(true,bookService.list());
+    public R getAll() {
+        return new R(true, bookService.list());
     }
 
     @PostMapping
@@ -33,11 +33,11 @@ public class BookController {
 //        return new R(bookService.save(book));
         if (book.getName().equals("123")) throw new IOException();
         Boolean flag = bookService.save(book);
-        return new R(flag,flag ? "添加成功^_^" : "添加失败-_-!");
+        return new R(flag, flag ? "添加成功^_^" : "添加失败-_-!");
     }
 
     @PutMapping
-    public R update(@RequestBody Book book){
+    public R update(@RequestBody Book book) {
 //        return new R(bookService.update(book,null));
 //        if (book.getName().equals("123") ) throw new IOException();
         boolean flag = bookService.updateById(book);
@@ -45,31 +45,33 @@ public class BookController {
     }
 
     @DeleteMapping("{id}")
-    public R delete(@PathVariable("id") Integer id){
-        return new R(true,bookService.removeById(id));
+    public R delete(@PathVariable("id") Integer id) {
+        return new R(true, bookService.removeById(id));
     }
 
     @GetMapping("{id}")
-    public R getByID(@PathVariable("id") Integer id)
-    {
+    public R getByID(@PathVariable("id") Integer id) {
+        System.out.println("test hot deploy ....");
+        System.out.println("test hot deploy ....");
+
         R r = new R(true);
         r.setData(bookService.getById(id));
         return r;
     }
+    
+
     @GetMapping("/{currentPage}/{pageSize}")
     public R getPage(@PathVariable(required = false) int currentPage,
                      @PathVariable(required = false) int pageSize,
-                     Book book){
+                     Book book) {
         IPage<Book> page = bookService.getPage(currentPage, pageSize, book);
 
-        if (currentPage > page.getPages()){
-            page = bookService.getPage((int) page.getPages(),pageSize,book);
+        if (currentPage > page.getPages()) {
+            page = bookService.getPage((int) page.getPages(), pageSize, book);
         }
 
-        return new R(true,page);
+        return new R(true, page);
     }
-
-
 
 
 }

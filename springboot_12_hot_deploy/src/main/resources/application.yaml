@@ -1,13 +1,13 @@
 spring:
   profiles:
-    active: dev
+    active: pro
 
 
 
 ---
 
 server:
-  port: 82
+  port: 80
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -25,7 +25,6 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
 
 ---
 
