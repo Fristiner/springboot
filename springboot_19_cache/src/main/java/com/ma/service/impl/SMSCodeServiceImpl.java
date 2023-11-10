@@ -5,7 +5,6 @@ import com.ma.service.SMSCodeService;
 import com.ma.utils.CodeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,7 +17,7 @@ public class SMSCodeServiceImpl implements SMSCodeService {
     @Override
     // 这里需要的是将结果放到缓存中不需要从缓存中读
 //    @Cacheable(key = "#tele", value = "smsCode")
-     @CachePut(key = "#tele", value = "smsCode")
+    @CachePut(key = "#tele", value = "smsCode")
     public String sendCodeToSMS(String tele) {
         String code = codeUtils.generator(tele);
         return code;

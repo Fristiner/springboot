@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev
+    active: pro
 
 
 
@@ -9,12 +9,16 @@ spring:
 server:
   port: 82
 spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db1?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
     username: root
-    password: 123456
+    password: 123456789
   config:
     activate:
       on-profile: pro
@@ -25,6 +29,14 @@ mybatis-plus:
       id-type: auto
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 
 ---
